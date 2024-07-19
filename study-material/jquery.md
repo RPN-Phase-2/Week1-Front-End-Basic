@@ -317,7 +317,7 @@ Hanya menggunakan `$.ajax(obj)` kita sudah mendapatkan ready state change + kita
 
 Jangan lupa push semua file HTML materi ini ke repo week1
 
-EXPLORE  CHALLANGE:
+## EXPLORE  CHALLANGE:
 
 - hands on ke dokumentasi jquery, atau w3school untuk resource baca yang lebih mudah
  
