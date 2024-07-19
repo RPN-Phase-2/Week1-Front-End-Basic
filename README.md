@@ -5,3 +5,6 @@ Week 1 ini kita kembali lagi ke old school, seperti preparation phase 1. Kalian 
 ## Kenapa Pake Cara Old School?
 Sebelum kalian memakai new trend front end tech, alangkah baiknya kalian belajar mulai memahami cara lama. Karena cara baru itu menggunakan virtual DOM, akan sangat rumit kalau kalian tidak memahami DOM itu sendiri. Secara berurutan, kalian akan melihat sendiri seberapa jauh gap perkembangan teknologi front end dari cara lama dan cara baru.
 
+
+## Week 1 Study Material (Berurutan)
+- [HTML](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/html.md)
