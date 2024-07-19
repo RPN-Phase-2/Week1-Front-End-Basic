@@ -28,9 +28,13 @@ Di logic challange ini kalian akan membuat aplikasi full stack (frontend and bac
  
 Point penting project ini adalah : 
 -> Public API boleh dipakai untuk group project ini
+
 -> JQUERY Only (BANNED FOR MODERN TOOLS React, Vue, angular)
+
 -> library support frontend boleh dipakai seperti echart js, swal notification dll
+
 -> CSS library dibolehkan (bootstrap, tailwind, or any)
+
 -> Wajib ada authentication feature (login, register)
 
 sebisa mungkin aplikasi kalian harus ada storynya atau background idea dan masalah yang di solve dari aplikasi kalian.
