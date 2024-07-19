@@ -2,9 +2,11 @@
 
 Bungkus isi dari tugas ini jadi folder pet-shop. push di repo week1
 
-Pet Shop: HTML + CSS + JS
+Pet Shop: HTML + CSS + JS (STATIC WEBSITE)
 
-Kalian akan membuat website pet shop sederhana menggunakan html + css. dilarang menggunakan framework atau library apapun. tugas ini fungsinya untuk implementasi hasil explore kalian tentang html dan css.
+Kalian akan membuat website pet shop sederhana menggunakan html + css. library atau tools frontend untuk mempercantik website dibolehkan. tugas ini fungsinya untuk implementasi hasil explore kalian tentang html dan css.
+
+FRAMEWORK BANNED -> React.js, Vue.js, any modern framework tools.
 
 css layout wajib memakai flexbox
 
