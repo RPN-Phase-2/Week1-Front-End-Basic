@@ -304,7 +304,7 @@ disini kita membuat simple website ice cream dengan tampilan 2 produk ice cream.
 ![image](https://github.com/user-attachments/assets/db9df058-db75-46ff-afa2-7ded45fbfce0)
 
 ## Explore Challange 
-Css hal yang paling banyak perlu di explore, saking banyaknya property CSS dokumentasi dari online pun masih banyak yang belum nge cover semua materi CSS. tapi yang perlu kalian pahamin disini lebih ke konsep struktur CSS dahulu.
+CSS hal yang paling banyak perlu di explore, saking banyaknya property CSS dokumentasi dari online pun masih banyak yang belum nge cover semua materi CSS. tapi yang perlu kalian pahamin disini lebih ke konsep struktur CSS dahulu.
 
 https://www.w3schools.com/w3css/defaulT.asp
 
