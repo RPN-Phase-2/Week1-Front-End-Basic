@@ -13,3 +13,7 @@ Sebelum kalian memakai new trend front end tech, alangkah baiknya kalian belajar
 - [Logic Challange : Pet Shop](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/lc-pet-shop.md)
 - [Jquery : Javascript Front End Library](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/jquery.md)
 - [Logic Challange : Inventory System AJAX Post](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/lc-ajax-post.md)
+- [Local Storage](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/local-storage.md)
+- [Soft Skills : Good Presentation](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/sk-good-presentation.md)
+- [Group Project Week1](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/gp-week1.md)
+- [Deploy Frontend Using Vercel](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/deploy-vercel.md)
