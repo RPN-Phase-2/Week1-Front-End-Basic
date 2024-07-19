@@ -225,7 +225,7 @@ Buatlah file ajax-yugi.html , dan implementasikan code dibawah :
             };
 
             // Menginisiasi permintaan GET ke server
-            xhttp.open("GET", "https://db.ygoprodeck.com/api/v7/cardinfo.php                   name=Dark%20Magician", true);
+            xhttp.open("GET", "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician", true);
 
             // Mengirim permintaan
             xhttp.send();
