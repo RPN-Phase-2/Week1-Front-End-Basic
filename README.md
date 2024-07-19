@@ -8,3 +8,6 @@ Sebelum kalian memakai new trend front end tech, alangkah baiknya kalian belajar
 
 ## Week 1 Study Material (Berurutan)
 - [HTML](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/html.md)
+- [CSS](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/css.md)
+- [CSS Layouting Flexbox](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/css-flexbox.md)
+- [Logic Challange : Pet Shop](https://github.com/RPN-Phase-2/Week1-Front-End-Basic/blob/main/study-material/lc-pet-shop.md)
