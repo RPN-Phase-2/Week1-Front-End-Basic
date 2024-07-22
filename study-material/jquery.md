@@ -74,13 +74,18 @@ langsung saja kita coba jquery, pertama buatlah simple html seperti ini :
 script src dari link ajax ini berfungsi untuk mengaktifkan library jquery kedalam website kita, ini cara lama menggunakan CDN ketika kita ingin install library di project kita.
 
 disini kita mempunya 3 elemen :
+
 -Gambar
+
 -Button (sembunyikan)
+
 -Button (tampilkan)
 
 
 Logic nya adalah kita ingin melakukan suatu interaksi ketika user click ke button tersebut.
+
 if button click sembunyikan -> gambar hilang (fade out animation)
+
 if button click tampilkan -> gambar tampilkan (fade in animation)
 
 jadi script nya seperti ini :
