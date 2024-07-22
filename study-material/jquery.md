@@ -274,7 +274,7 @@ const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
 
 Setelah kalian selesai pelajarin codenya, jika dijalankan maka result nya akan seperti ini :
 
-![image](https://github.com/user-attachments/assets/ebdf8aa6-7f2b-4928-99cd-81015f359795)
+<img src="https://github.com/user-attachments/assets/ebdf8aa6-7f2b-4928-99cd-81015f359795" width="500" height="700">
 
 jadi seperti itulah contoh jaman dulu untuk komunikasi dengan server backend, menggunakan XHR dan kombinasi manipulasi DOM untuk membuat website jadi lebih interaktif. 
 tetapi XHR ini sangat sekali boros codenya, disitulah Jquery datang dengan shorthandnya untuk membungkus fungsi xhr ajax lebih efisien.
