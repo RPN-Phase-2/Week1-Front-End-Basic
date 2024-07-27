@@ -37,6 +37,8 @@ Point penting project ini adalah :
 
 -> Wajib ada authentication feature (login, register)
 
+-> Original Idea , sebisa mungkin idenya original dari kalian dan membuat aplikasi yang fresh
+
 sebisa mungkin aplikasi kalian harus ada storynya atau background idea dan masalah yang di solve dari aplikasi kalian.
 
 MVP harus BESAR (MID SCALE APP), fitur harus berguna untuk user dan bermanfaat.
