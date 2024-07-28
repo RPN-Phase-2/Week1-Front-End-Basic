@@ -9,6 +9,7 @@ Kalian akan membuat website pet shop sederhana menggunakan html + css. library a
 FRAMEWORK BANNED -> React.js, Vue.js, any modern framework tools.
 
 css layout wajib memakai flexbox
+css wajib native
 
 Kreasi apapun diterima disini, jadi buat se kreatif mungkin pet shop versi kalian. yang paling dinilai adalah jelas tampilan websitenya.
 
