@@ -1,4 +1,4 @@
-## Logic Challange (Pet Shop)
+## Logic Nolep (Pet Shop)
 
 Bungkus isi dari tugas ini jadi folder pet-shop. push di repo week1
 
