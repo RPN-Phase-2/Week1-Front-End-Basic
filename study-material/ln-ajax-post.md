@@ -1,4 +1,4 @@
-# Logic Challange (IS AJAX Post)
+# Logic Nolep (IS AJAX Post)
 
 Bungkus isi dari tugas ini jadi folder inventory-ajax-post. push di repo week1
 
