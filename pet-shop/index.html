@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Pet Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .nav-hidden {
+      background-color: transparent;
+      border-bottom: none;
+      color: white;
+      padding-block: 32px;
+    }
+
+    .nav-visible {
+      background-color: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding-block: 16px;
+    }
+
+    .nav-visible {
+      transition: background-color 0.3s ease, border-bottom 0.3s ease;
+      transition: padding 0.3s ease, border-bottom 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <main>
+    <nav
+      id="main-nav"
+      class="fixed px-6 top-0 left-0 w-full z-50"
+    >
+      <div class="flex justify-end md:justify-between items-center max-w-7xl mx-auto">
+        <a
+          href="#"
+          class="hidden md:block"
+        >
+          <h1 class="text-4xl font-bold"><i>HAPPY SHOP</i></h1>
+        </a>
+
+        <ul class="hidden md:flex items-center space-x-8">
+          <li class="hover:opacity-90 transition font-normal tracking-wide"><a href="#">Home</a></li>
+          <li class="hover:opacity-90 transition font-normal tracking-wide"><a href="#categories">Categories</a>
+          </li>
+          <li class="hover:opacity-90 transition font-normal tracking-wide"><a href="#contacts">Contact</a></li>
+          <li class="hover:opacity-90 transition font-normal tracking-wide"><a href="#blogs">Blogs</a></li>
+        </ul>
+
+        <button
+          type="button"
+          class="block md:hidden hover:bg-black/5 rounded h-[40px] w-[40px] transition"
+          id="open-mobile-nav"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div
+          id="mobile-nav"
+          class="z-40 hidden top-0 left-0 right-0 bg-white md:hidden py-4 px-6 z-10 border-b border-gray-200"
+        >
+          <ul class="flex flex-col space-y-4">
+            <li class="text-black hover:opacity-90 transition font-normal tracking-wide"><a href="#">Home</a></li>
+            <li class="text-black hover:opacity-90 transition font-normal tracking-wide"><a
+                href="#categories">Categories</a>
+            </li>
+            <li class="text-black hover:opacity-90 transition font-normal tracking-wide"><a href="#contacts">Contact</a>
+            </li>
+            <li class="text-black hover:opacity-90 transition font-normal tracking-wide"><a href="#blogs">Blogs</a></li>
+          </ul>
+
+          <button
+            type="button"
+            class="text-black hover:bg-black/5 rounded h-[40px] w-[40px] transition absolute top-3 right-3 z-20"
+            id="close-mobile-nav"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="relative w-full h-fit bg-cover bg-center h-screen"
+      style="background-image: url('./images/main.jpeg');"
+      aria-label="hero"
+    >
+      <div class="h-screen bg-blue-700 bg-opacity-50 py-16 flex items-center justify-center">
+        <div class="flex items-center justify-center flex-col space-y-4 md:space-y-6">
+          <h1 class="text-center font-extrabold text-white leading-[2] md:leading-[3]">
+            <i>
+              <span class="text-2xl md:text-4xl">HIGH QUALITY</span>
+              <br />
+              <span class="text-5xl md:text-7xl">PET FOOD</span>
+            </i>
+          </h1>
+          <h4 class="text-white font-normal">Sale up to 40% off today</h4>
+          <button
+            type="button"
+            class="bg-black hover:bg-black/90 text-white px-6 py-2 rounded-full font-medium text-sm"
+          >
+            Shop Now
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section aria-label="main">
+      <!-- Categories -->
+      <div
+        id="categories"
+        class="max-w-7xl mx-auto my-16 px-6"
+      >
+        <h2 class="text-4xl font-medium text-center"><span class="text-blue-500 font-semibold">Top</span> categories
+        </h2>
+
+        <div class="mt-8">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div class="flex flex-col items-center space-y-2 group hover:opacity-80 transition cursor-pointer">
+              <img
+                src="./images/cat-food.jpeg"
+                alt="Cat Food"
+                width="250"
+                height="250"
+                class="rounded-xl group-hover:scale-[1.02] transition"
+              >
+
+              <h4 class="text-lg font-medium">Cat Food</h4>
+            </div>
+            <div class="flex flex-col items-center space-y-2 group hover:opacity-90 transition cursor-pointer">
+              <img
+                src="./images/cat-toys.jpeg"
+                alt="Cat Toys"
+                width="250"
+                height="250"
+                class="rounded-xl group-hover:scale-[1.02] transition"
+              >
+              <h4 class="text-lg font-medium">Cat Toys</h4>
+            </div>
+            <div class="flex flex-col items-center space-y-2 group hover:opacity-90 transition cursor-pointer">
+              <img
+                src="./images/dog-food.jpeg"
+                alt="Dog Food"
+                width="250"
+                height="250"
+                class="rounded-xl group-hover:scale-[1.02] transition"
+              >
+              <h4 class="text-lg font-medium">Dog Food</h4>
+            </div>
+            <div class="flex flex-col items-center space-y-2 group hover:opacity-90 transition cursor-pointer">
+              <img
+                src="./images/dog-toys.jpeg"
+                alt="Dog Toys"
+                width="250"
+                height="250"
+                class="rounded-xl group-hover:scale-[1.02] transition"
+              >
+              <h4 class="text-lg font-medium">Dog Toys</h4>
+            </div>
+            <div class="flex flex-col items-center space-y-2 group hover:opacity-90 transition cursor-pointer">
+              <img
+                src="./images/dog-supplement.jpeg"
+                alt="Dog Supplement"
+                width="250"
+                height="250"
+                class="rounded-xl group-hover:scale-[1.02] transition"
+              >
+              <h4 class="text-lg font-medium">Dog Supplement</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Categories -->
+
+      <!-- Contact -->
+      <div
+        id="contacts"
+        class="py-16 px-6 bg-gray-50"
+      >
+        <div class="flex flex-col space-y-4 max-w-[400px] mx-auto">
+          <h2 class="text-4xl font-medium text-center">
+            <span class="text-blue-500 font-semibold">Lets</span> Have <span
+              class="text-blue-500 font-semibold">a</span>
+            Chat
+            <i class="fa-solid fa-hand text-black rotate-[20deg] text-3xl"></i>
+          </h2>
+
+          <p class="text-center text-black/90 font-normal text-sm">Questions about our products/services,
+            orders, or
+            just want to say hello? We're here to help</p>
+        </div>
+
+        <form class="mt-8 max-w-[550px] mx-auto flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
+            <!-- Input -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex flex-col space-y-1">
+                <label for="firstname">First Name</label>
+                <input
+                  type="text"
+                  required
+                  id="firstname"
+                  placeholder="Arisah"
+                  class="outline-none border border-gray-200 px-3 py-1.5 rounded-lg text-sm font-light focus:border-blue-200 focus:ring-4 focus:ring-blue-200"
+                >
+              </div>
+              <div class="flex flex-col space-y-1">
+                <label for="firstname">Last Name</label>
+                <input
+                  type="text"
+                  required
+                  id="lastname"
+                  placeholder="Saih"
+                  class="outline-none border border-gray-200 px-3 py-1.5 rounded-lg text-sm font-light focus:border-blue-200 focus:ring-4 focus:ring-blue-200"
+                >
+              </div>
+              <div class="flex flex-col space-y-1">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  required
+                  id="email"
+                  placeholder="arisahsaih@gmail.com"
+                  class="outline-none border border-gray-200 px-3 py-1.5 rounded-lg text-sm font-light focus:border-blue-200 focus:ring-4 focus:ring-blue-200"
+                >
+              </div>
+              <div class="flex flex-col space-y-1">
+                <label for="phonenumber">Phone Number</label>
+                <input
+                  type="text"
+                  required
+                  id="phonenumber"
+                  placeholder="+62 853 xxxx xxxx"
+                  class="outline-none border border-gray-200 px-3 py-1.5 rounded-lg text-sm font-light focus:border-blue-200 focus:ring-4 focus:ring-blue-200"
+                >
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="flex flex-col space-y-1">
+              <label for="message">Message</label>
+              <textarea
+                required
+                id="message"
+                placeholder="Hey i am interested in your products"
+                class="outline-none border border-gray-200 px-3 py-1.5 rounded-lg text-sm font-light focus:border-blue-200 focus:ring-4 focus:ring-blue-200"
+                rows="7"
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-2.5 overflow-hidden font-bold text-white transition-all duration-300 bg-blue-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-blue-300 ring-offset-blue-200 hover:ring-offset-blue-500 ease focus:outline-none w-full"
+          >
+            <span
+              class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"
+            ></span>
+            <span
+              class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"
+            ></span>
+            <span class="relative z-20 flex items-center text-sm">
+              <svg
+                class="relative w-5 h-5 mr-2 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+              Send message
+            </span>
+          </button>
+
+          <div class="relative mt-3">
+            <div class="h-px w-full bg-gray-200"></div>
+
+            <ul
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center space-x-4 bg-gray-50 px-2.5 py-2 rounded"
+            >
+              <li class="group">
+                <a href="#"><i
+                    class="fa-brands fa-instagram group-hover:text-orange-700 transition-all text-lg"></i></a>
+              </li>
+              <li class="group">
+                <a href="#"><i class="fa-brands fa-whatsapp group-hover:text-green-700 transition-all text-lg"></i></a>
+              </li>
+              <li class="group">
+                <a href=""><i class="fa-brands fa-x-twitter group-hover:text-blue-700 transition-all text-lg"></i></a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+      <!-- End Contact -->
+
+      <!-- Blogs -->
+      <div
+        id="blogs"
+        class="max-w-7xl mx-auto my-16 px-6"
+      >
+        <div class="flex justify-between items-end">
+          <h2 class="text-4xl font-medium text-center"><span class="text-blue-500 font-semibold">Latest</span> blogs
+          </h2>
+
+          <a
+            href="#"
+            class="font-light text-sm underline hover:text-blue-700 transition-all"
+          >See more ...</a>
+        </div>
+
+        <article class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="relative w-[350px] h-[350px] rounded-xl overflow-hidden">
+            <img
+              src="./images/dog-food.jpeg"
+              alt="Blog 1"
+              width="350"
+              height="350"
+              class="relative z-0 select-none rounded-xl"
+            >
+
+            <div class="z-10 absolute flex inset-0 px-8 justify-center flex-col space-y-8">
+              <div class="flex flex-col space-y-2">
+                <h5 class="text-lg text-white font-normal uppercase">our brand will love YoU</h5>
+                <h3 class="font-medium text-white text-3xl">New in this<br /> year</h3>
+              </div>
+
+              <button
+                type="button"
+                class="py-2.5 px-8 w-fit rounded-full bg-orange-500 hover:bg-black text-white font-medium"
+              >Read More</button>
+            </div>
+
+            <div class="absolute inset-0 bg-blue-700/50"></div>
+          </div>
+          <div class="relative w-[350px] h-[350px] rounded-xl overflow-hidden">
+            <img
+              src="./images/cat-toys.jpeg"
+              alt="Blog 1"
+              width="350"
+              height="350"
+              class="relative z-0 select-none rounded-xl"
+            >
+
+            <div class="z-10 absolute flex inset-0 px-8 justify-center flex-col space-y-8">
+              <div class="flex flex-col space-y-2">
+                <h5 class="text-lg text-white font-normal uppercase">our brand will love YoU</h5>
+                <h3 class="font-medium text-white text-3xl">New in this<br /> year</h3>
+              </div>
+
+              <button
+                type="button"
+                class="py-2.5 px-8 w-fit rounded-full bg-orange-500 hover:bg-black text-white font-medium"
+              >Read More</button>
+            </div>
+
+            <div class="absolute inset-0 bg-blue-700/50"></div>
+          </div>
+          <div class="relative w-[350px] h-[350px] rounded-xl overflow-hidden">
+            <img
+              src="./images/dog-supplement.jpeg"
+              alt="Blog 1"
+              width="350"
+              height="350"
+              class="relative z-0 select-none rounded-xl"
+            >
+
+            <div class="z-10 absolute flex inset-0 px-8 justify-center flex-col space-y-8">
+              <div class="flex flex-col space-y-2">
+                <h5 class="text-lg text-white font-normal uppercase">our brand will love YoU</h5>
+                <h3 class="font-medium text-white text-3xl">New in this<br /> year</h3>
+              </div>
+
+              <button
+                type="button"
+                class="py-2.5 px-8 w-fit rounded-full bg-orange-500 hover:bg-black text-white font-medium"
+              >Read More</button>
+            </div>
+
+            <div class="absolute inset-0 bg-blue-700/50"></div>
+          </div>
+        </article>
+      </div>
+      <!-- End Blogs -->
+    </section>
+
+    <footer class="mt-16 py-8 border-t border-gray-200">
+      <h5 class="max-w-7xl mx-auto text-center text-xs font-normal">
+        &copy; 2024 Pet Shop. Inc All rights reserved.
+      </h5>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const openMobileNav = document.getElementById('open-mobile-nav');
+      const closeMobileNav = document.getElementById('close-mobile-nav');
+      const mobileNav = document.getElementById('mobile-nav');
+      const nav = document.getElementById('main-nav');
+      const scrollThreshold = 100;
+
+      function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+          nav.classList.add('nav-visible');
+          nav.classList.remove('nav-hidden');
+        } else {
+          nav.classList.add('nav-hidden');
+          nav.classList.remove('nav-visible');
+        }
+      }
+      window.addEventListener('scroll', handleScroll);
+
+
+      openMobileNav.addEventListener('click', function () {
+        mobileNav.classList.remove('hidden');
+        mobileNav.classList.add('absolute');
+      })
+
+      closeMobileNav.addEventListener('click', function () {
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('absolute');
+      });
+
+
+      // Set initial state
+      handleScroll();
+    });
+  </script>
+</body>
+
+</html>
