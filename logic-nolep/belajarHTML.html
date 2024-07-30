@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/ecommerce.png" type="image/x-icon" />
+    <title>My E-commerce Store</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>My E-commerce Store</h1>
+      <!-- navbar -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <!-- main content -->
+    <main>
+      <section id="home">
+        <h2>Welcome to Our Store</h2>
+        <p>Discover the best products at unbeatable price</p>
+      </section>
+
+      <section id="products">
+        <h2>Our Products</h2>
+
+        <form action="">
+          <input type="search" name="search" id="search" placeholder="Search...">
+          <input type="submit" value="Search">
+        </form>
+
+        <div class="product-list">
+          <article>
+            <h3>Watch</h3>
+            <figure>
+              <img src="./img/watch.jpg" alt="watch" width="200">
+            </figure>
+            <p>Description: A premium watch with an elegant design.</p>
+            <p>Price: $100</p>
+            <button>Add to Cart</button>
+          </article>
+          <article>
+            <h3>DSLR Camera</h3>
+            <figure>
+              <img src="./img/camera.jpg" alt="DSLR camera" width="200">
+            </figure>
+            <p>Description: A rugged camera designed for action and adventure</p>
+            <p>Price: $200</p>
+            <button>Add to Cart</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to My E-commerce Store, the best destination to shop for quality products at the best prices. We offer a variety of products to meet your needs and desires, from electronics, fashion, to household products.</p>
+      </section>
+
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        
+        <blockquote>
+          <p>"Great products and <strong>amazing</strong> customer service!" - Tono</p>
+        </blockquote>
+        <blockquote>
+          <p>"I love shopping here. The prices are <strong>unbeatable</strong>!" - Lisa</p>
+        </blockquote>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+          <label for="name">Name</label><br />
+          <input type="text" name="name" id="name" required /><br />
+
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="email" required /><br />
+
+          <label for="message">Message</label><br />
+          <textarea name="message" id="message" rows="4" required></textarea
+          ><br />
+
+          <input type="submit" value="Send" />
+        </form>
+      </section>
+    </main>
+
+    <hr>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2024 My E-commerce Store</p>
+    </footer>
+  </body>
+</html>
