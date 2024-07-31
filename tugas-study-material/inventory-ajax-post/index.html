@@ -1,0 +1,78 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container center-div">
+      <div id="login">
+        <div class="left">
+          <div class="left-left">
+            <h1>Welcome to</h1>
+            <img src="assets/images/inventory2.svg" width="100px">
+            <h3>Inventory System</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada tincidunt nunc, ut egestas turpis rutrum at. Morbi finibus sapien mauris, vitae porttitor lacus fringilla ac. Phasellus tristique egestas ultrices. Aenean at nibh euismod, tempus risus vitae, interdum velit. Nunc hendrerit sollicitudin lacinia. Maecenas dapibus luctus nibh et consequat.</p>
+            <div class="footer">
+              <h5>GITHUB <a href="https://github.com">HERE</a></h5>
+              <h5>EMAIL <a href="mailto:example@email.com">HERE</a></h5>
+            </div>
+          </div>
+          <div class="left-right"></div>
+        </div>
+        <div class="right">
+          <form id="login-form">
+            <h1>Glad To see you!</h1>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="hide" id="email">Email must contain '@' and 'dot'</span>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <span class="hide" id="password">Password must contain 8 character, 1 uppercase, and 1 number</span>
+            <input type="submit" value="login">
+            <p>Scroll to register</p>
+          </form>
+        </div>
+      </div>
+      <div id="register" style="display:none">
+        <div class="left">
+          <div class="left-left">
+            <h1>Welcome to</h1>
+            <img src="assets/images/inventory2.svg" width="100px">
+            <h3>Inventory System</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada tincidunt nunc, ut egestas turpis rutrum at. Morbi finibus sapien mauris, vitae porttitor lacus fringilla ac. Phasellus tristique egestas ultrices. Aenean at nibh euismod, tempus risus vitae, interdum velit. Nunc hendrerit sollicitudin lacinia. Maecenas dapibus luctus nibh et consequat.</p>
+            <div class="footer">
+              <h5>GITHUB <a href="https://github.com">HERE</a></h5>
+              <h5>EMAIL <a href="mailto:example@email.com">HERE</a></h5>
+            </div>
+          </div>
+          <div class="left-right"></div>
+        </div>
+        <div class="right">
+          <form id="register-form">
+            <h1>Create Your Account</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="hide" id="email">Email must contain '@' and 'dot'</span>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <span class="hide" id="password">Password must contain 8 character, 1 uppercase, and 1 number</span>
+            <input type="submit" value="register">
+            <p>Scroll to Login</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="notification-container">
+      <ul></ul>
+    </div>
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/scroll.js"></script>
+    <script src="assets/scripts/notification.js"></script>
+    <script></script>
+  </body>
+</html>
