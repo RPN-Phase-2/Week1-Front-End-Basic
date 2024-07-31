@@ -1,0 +1,184 @@
+.tooltip {
+  position: relative;
+  span {
+    font-size: 0.7em;
+    visibility: hidden;
+    width: 120px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: -5px;
+    margin-top: -50px;
+  }
+}
+
+.tooltip:hover > span {
+  visibility: visible;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 25px;
+  border-style: solid;
+  width: 30vh;
+
+  h3 {
+    text-decoration: underline;
+  }
+
+  img {
+    border-radius: 25px;
+  }
+
+  cursor: pointer;
+}
+
+.longcard {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 25px;
+  border-style: solid;
+  overflow: hidden;
+  width:18em;
+  .left {
+    gap: 0.5em;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    h3 {
+      text-decoration: underline;
+    }
+    img {
+      border-radius: 25px;
+    }
+  }
+  .right {
+    position: relative;
+    align-self: self-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5em;
+    h4 { max-width: max-content }
+    span.close {
+      position: absolute;
+      top: -70%;
+      z-index: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.input-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  span {
+    cursor: pointer;
+    text-align: center;
+    padding-inline: 10px;
+  }
+  input[type="number"] {
+    border-radius: 25px;
+    border-style: none;
+    text-align: center;
+    background-color: inherit;
+    color: inherit;
+    width: 25px;
+  }
+  input[type="number"]:focus {
+    outline: none;
+  }
+}
+
+.input-number > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal-container {
+  font-size: 1.5rem;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  .modal-box {
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  }
+
+  span {
+    font-size: 1.5rem;
+    position: absolute;
+    padding: 1em;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .modal-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  button {
+    background-color: inherit;
+    color: inherit;
+    border-radius: 25px;
+    border-color: inherit;
+    border-style: solid;
+    padding: 0.5em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: green;
+  }
+
+  button:active {
+    transform: scale(1);
+  }
+
+  img {
+    margin-left: 8em;
+    align-self: flex-start;
+    position: absolute;
+    top: -4.2em;
+    left: 0;
+  }
+}
