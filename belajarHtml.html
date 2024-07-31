@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halaman Sederhana</title>
+</head>
+<body>
+    <div id="container">
+
+        
+        <h1 id="judul">Selamat datang di Halaman <u>Sederhana</u></h1>
+        <table>
+            <tr>
+                <td>
+                    <div id="div1">
+                        <p>Ini adalah contoh button HTML <b>sederhana.</b></p>
+                        <ul>
+                            <li><button onclick="changeTitle('kamu kena hack')" >pencet ini</button></li>
+                            <li><button onclick="changeBackgroundColor('lightblue')" >pencet ini</button></li>
+                            <li><button onclick="changeImage('https://images.unsplash.com/photo-1650045767582-a21e31b31753?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a3VjaW5nJTIwbHVjdXxlbnwwfHwwfHx8MA%3D%3D')">pencet ini</button></li>
+                            <li><button onclick="toggleCircle()">pencet ini</button></li>
+                            <li><button onclick="collapseElements()">pencet ini</button></li>
+                      
+                            
+                            
+                            
+                        </ul>
+                    </div>    
+                </td>
+                <td>
+                    <div id="div2">
+                        <p>Ini adalah contoh halaman HTML <b>sederhana.</b></p>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </div>
+                
+                </td>
+                <td>
+                    <div id="div3">
+                       
+                            <iframe width="50%" height="50%" src="https://www.youtube.com/embed/q-Y0bnx6Ndw" frameborder="5" allowfullscreen></iframe>
+              
+                    </div>
+                
+                </td>
+                <td>
+                  
+                        
+                        <div class="circle">
+                            <img id="gambar" src="https://plus.unsplash.com/premium_photo-1666612335823-31c2d1ee35b9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3VjaW5nJTIwbHVjdXxlbnwwfHwwfHx8MA%3D%3D" 
+                            alt="wkwkwkwk" width="500" height="500"> <br>
+                            
+                            
+                        </div>
+                    
+                </td>
+                
+            </tr>
+            
+        </table>
+        
+        <h3>Contoh Tabel</h3>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Telepon</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Asep</td>
+                <td>Jl. 1</td>
+                <td>1111</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Budi</td>
+                <td>Jl. 2</td>
+                <td>2222</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Coki</td>
+                <td>Jl. 3</td>
+                <td>3333</td>
+            </tr>
+        </table>
+
+        <h4><a href="https://www.google.com" target="_blank"><em>Google nih</em></a></h4>
+        <br>
+        <a href="javascript:alert('kamu kena hack');">pencet</a>
+
+        
+        <center>
+            <h1>form daftar</h1>
+            <form action="/">
+                <label for="nik">NIK:</label>
+                <input type="text" id="nik" name="nik"><br><br>
+                <label for="name">nama:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <button type="button" onclick="alert('kamu kena hack')">Submit</button><input type="submit" value="Submit">
+            </form>
+            <p>pencet submit</p>
+        
+        </center>
+        
+
+
+        <p>Terima kasih telah mengunjungi halaman ini.</p>
+    </div>
+</body>
+
+<style>
+        #div1, #div2 {
+            width: 50%;
+            float: left;
+            margin-left: 20%;
+            
+        }
+        #div3{
+            display: flex;
+            float: left;
+            justify-content: center;
+            
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+        }
+
+        table, th, td {
+            border: 1px solid black; 
+        }
+
+        th, td {
+            padding: 8px; 
+            text-align: left; 
+        }
+
+        th {
+            background-color: #f2f2f2; 
+        }
+
+        .circle {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .circle img {
+            border-radius: 50%;
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+    #container {
+            position: relative;
+            overflow: hidden; 
+    }
+
+    .animate-collapse {
+            animation: collapse 5s forwards;
+    }
+
+    @keyframes collapse {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            10%{
+                transform: translateY(100%);
+            }
+            20%{
+                transform: translateY(50%);
+            }
+            30%{
+                transform: translateX(-10%);
+            }
+            40%{
+                transform: translateX(90%);
+            }
+            50%{
+                transform: translateY(10%);
+            }
+            60%{
+                transform: translateX(-50%);
+            }
+            70%{
+                transform: translateX(70%);
+            }
+            80%{
+                transform: translateY(-20%);
+            }
+            90%{
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateY(50%);
+                opacity: 0;
+            }
+    }
+
+  
+  
+</style>
+<script>
+    function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    function changeTitle(text) {
+        document.getElementById("judul").innerHTML = text;
+    }
+
+    function changeImage(text) {
+        document.getElementById("gambar").src = text;
+    }
+
+    function toggleCircle() {
+            var circle = document.querySelector(".circle");
+            if (circle.style.backgroundColor === "black") {
+                circle.style.backgroundColor = "blue";
+            } else {
+                circle.style.backgroundColor = "black";
+            }
+    }
+
+    function collapseElements() {
+        var container = document.getElementById("container");
+        var elements = container.children;
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.add("animate-collapse");
+        }
+    }
+
+</script>
+
+</html>
