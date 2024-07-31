@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Shop</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/cat.png">
+  </head>
+  <body>
+    <section id="home">
+      <div class="container odd">
+        <div class="cat-hero">
+          <img class="anim-zoom-hover" src="assets/images/cat.png">
+        </div>
+        <div class="home-content">
+          <div>
+            <h1>Cat Shop System</h1>
+            <p>Cat are cute!</p>
+            <p>So you must being sub to the paw!</p>
+            <p>By buying their stuff!</p>
+            <p>What are you buying ?</p>
+          </div>
+          <nav class="navbar">
+            <ul>
+              <li class="tooltip"><span class="even">catfood</span><a href="#catfood"><img class="anim-zoom-hover" src="assets/images/cat-food.png" height="100px"></a></li>
+              <li class="tooltip"><span class="even">cat toys</span><a href="#cattoy"><img class="anim-zoom-hover" src="assets/images/knitting.png" height="100px"></a></li>
+              <li class="tooltip"><span class="even">cart</span><a href="#cart"><img class="anim-zoom-hover" src="assets/images/shopping-cart.png" height="100px"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section id="catfood">
+      <div class="container even shop">
+        <h1>Cat Food!</h1>
+        <div id="catfood-products" class="shop-products"></div>
+      </div>
+    </section>
+    <section id="cattoy">
+      <div class="container odd shop">
+        <h1>Cat Toys!</h1>
+        <div id="cattoy-products" class="shop-products"></div>
+      </div>
+    </section>
+    <section id="cart">
+      <div class="container even">
+        <div class="cart-header">
+          <h1>Shopping Cart</h1>
+          <div class="tooltip" id="checkout-button"><span class="odd">chekout</span><img class="anim-zoom-hover" src="assets/images/shopping-cart.png" width="50px"></div>
+        </div>
+        <div class="cart-list">
+        </div>
+      </div>
+    </section>
+    <div class="anim-zoom-hover" id="back-to-home"><a href="#home" class="tooltip"><span class="odd">home</span><img src="assets/images/cat.png" width="100px"></a></div>
+    <div id="notification-container">
+      <ul></ul>
+    </div>
+    <div class="modal-container" id="payment-confirmation">
+      <div class="modal-box even anim-popup">
+        <img src="assets/images/shopping-cart.png" class="anim-back-and-forth" width="100px">
+        <span>x</span>
+        <div class="modal-content">
+          <h1>Total</h1>
+          <h3></h3>
+          <button id="payment-confirmation" class="anim-zoom-hover">Confirm</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/floaters.js"></script>
+  </body>
+</html>
+
