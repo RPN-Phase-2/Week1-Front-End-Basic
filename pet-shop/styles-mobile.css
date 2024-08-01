@@ -1,0 +1,114 @@
+@media (max-width: 480px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero .btn {
+        padding: 0.625rem 1.25rem;
+    }
+
+    #hamburger {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1001;
+       
+    }
+
+    #close {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 4rem;
+    }
+
+
+
+    nav ul li {
+        display: none;
+    }
+
+
+    .login-button {
+      
+        padding: 0.5rem 1rem;
+        width: auto;
+        text-align: center;
+    }
+
+    #column-2 img {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    #products {
+        padding: 1rem;
+    }
+
+    .product-wrapper {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        
+    }
+
+    .product-container {
+        flex: 1 1 auto;
+        
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+    }
+
+    .product-card {
+        width: auto;
+    }
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    #contact {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+
+    footer .social-icons a {
+        font-size: 1.25rem;
+    }
+}
