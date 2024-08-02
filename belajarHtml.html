@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Selamat Datang di Belajar HTML</h1>
+        <p>Menggunakan tag-tag unik dan advance HTML</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#interactive">Interactive Elements</a></li>
+        </ul>
+    </nav>
+
+    <section id="introduction">
+        <article>
+            <h2>Pengenalan</h2>
+            <p>HTML adalah bahasa markup standar untuk membuat halaman web. HTML adalah singkatan dari Hyper Text Markup
+                Language.</p>
+            <p>Beberapa tag yang unik dan advance di HTML adalah: <code>&lt;canvas&gt;</code>,
+                <code>&lt;video&gt;</code>,
+                <code>&lt;audio&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code>, dan masih banyak
+                lagi.
+            </p>
+        </article>
+    </section>
+
+    <section id="media">
+        <article>
+            <h2>Media</h2>
+            <h3>Video</h3>
+            <video controls width="600">
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </article>
+    </section>
+
+    <section id="form">
+        <article>
+            <h2>Formulir</h2>
+            <form>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="birthday">Tanggal Lahir:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+
+    <section id="interactive">
+        <article>
+            <h2>Elemen Interaktif</h2>
+            <details>
+                <summary>Info lebih lanjut</summary>
+                <p>HTML5 memperkenalkan beberapa elemen baru yang memungkinkan pengguna untuk berinteraksi dengan
+                    halaman
+                    web dengan cara yang lebih dinamis dan interaktif.</p>
+            </details>
+            <dialog id="myDialog">
+                <p>Ini adalah dialog box.</p>
+                <button onclick="document.getElementById('myDialog').close()">Close</button>
+            </dialog>
+            <button onclick="document.getElementById('myDialog').showModal()">Buka Dialog</button>
+        </article>
+    </section>
+
+    <aside>
+        <h2>Info Tambahan</h2>
+        <p>Belajar HTML dapat membantu Anda memahami dasar-dasar pembuatan halaman web dan aplikasi web.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Belajar HTML. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
