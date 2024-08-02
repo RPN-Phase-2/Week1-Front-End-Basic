@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.BrandName {
+    color: #25567b;
+    margin-top: -5px;
+}
+
+.TabLink a{
+    text-decoration: none;
+    color: #969696;
+    margin-right: 10px;
+}
+.TabLink a:hover{
+    color: #fe9215;
+}
+
+.active {
+    color: #fe9215;
+}
+
+.TabUser a{
+    text-decoration: none;
+    color: #fe9215;
+    margin-right: 20px;
+}
+
+.heroSection {
+    display: flex;
+}
+
+.HeroText {
+    padding: 50px;
+    color: #25567b;
+}
+
+.HeroText h1 {
+    font-size: 60px;
+}
+
+#product .card img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+#product {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 20px;
+    margin-top: -30px;
+    padding: 50px;
+    background-color: #fe9215;
+}
+
+#product .card {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#product .card h2 {
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+}
+
+#product .card .price {
+    letter-spacing: 7px;
+    font-family: small;
+    text-align: center;
+}
+
+#product .card button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #fe9215;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+}
+#product .card button:hover {
+    transition: all 0.2s;
+    padding: 15px 25px;
+}
+
+
+.cardServiceHeader {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+#service h2 {
+    text-align: center;
+    color: #25567b;
+    margin-bottom: 20px;
+}
+
+#service .cardService img {
+    width: 100%;
+}
+
+#service .cardService {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#service .cardService h1 {
+    font-weight: 500;
+    font-size: large;
+    text-align: center;
+    background-color: #fe9215;
+    margin-top: -10px;
+    color: white;
+    padding: 5px;
+}
+
+#sosmedSection {
+    background-color: #fe9215;
+    margin-top: -10px;
+}
+
+#sosmedSection  h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #25567b;
+    font-weight: 900;
+}
+
+.footer {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+#sosmed ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sosmed li {
+    display: flex;
+}
+
+#sosmed a {
+    text-decoration: none;
+    color: #333;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px; 
+    width: 100px; 
+    height: 80px; 
+    border-radius: 50%; 
+    background-color: white; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    filter: drop-shadow(0 20px 20px #0009);
+}
+
+.icon:hover {
+    background-color: #fe9215;
+    color: white;
+}
+
+.Petshop h1{
+    color: #25567b;
+    font-family: 700;
+}
+
+.Contact h1 {
+    color: #25567b;
+}
+
+.Layanan h1 {
+    color: #25567b;
+}
+
+.Layanan a {
+    display: block;
+    text-decoration: none;
+    color: #fe9215;
+}
+
+.Layanan a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fe9215;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #fe9215; 
+    margin: 20px 0; 
+}
+
+.footerh1 {
+    font-size: 20px;
+    text-align: center;
+    color: #25567b;
+}
+
+@media screen and (max-width : 576px) {
+    .TabLink {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: black;
+        align-items: center;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        background-color: white;
+        filter: drop-shadow(0 20px 50px #0009);
+        width: 80%;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+   .TabLink.slide {
+        transform: translateX(0);
+        opacity: 1;
+   }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .heroSection {
+        display: block;
+    }
+
+    .HeroText {
+        padding: 20px;
+        color: #25567b;
+    }
+    .HeroText h1 {
+        font-size: 40px;
+    }
+
+    .HeroImg img{
+        width: 400px;
+        height:300px;
+    }
+
+    #product .card img{
+        width: 90%;
+        filter: drop-shadow(0 50px 20px #0009);
+    }
+    
+    #product {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap: 20px;
+        margin-top: -30px;
+        padding: 20px;
+        background-color: #fe9215;
+    }
+    
+    #product .card {
+        background-color: #eeeee6;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    
+    #product .card h2 {
+        font-weight: 400;
+        font-size: medium;
+        text-align: center;
+    }
+    
+    #product .card .price {
+        letter-spacing: 6px;
+        font-family: small;
+        text-align: center;
+    }
+    
+    #product .card button {
+        display: block;
+        padding: 10px 20px;
+        background-color: #fe9215;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        margin: 10px auto 0 auto;
+        cursor: pointer;
+    }
+
+    .cardServiceHeader {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    
+    #service h2 {
+        text-align: center;
+        color: #25567b;
+        margin-bottom: 15px;
+    }
+    
+    #service .cardService img {
+        width: 100%;
+    }
+    
+    #service .cardService {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    #service .cardService h1 {
+        font-weight: 500;
+        font-size: large;
+        text-align: center;
+        background-color: #fe9215;
+        margin-top: -10px;
+        color: white;
+        padding: 5px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .Petshop h1{
+        color: #25567b;
+        font-family: 500;
+        font-size: 30px;
+    }
+    
+    .Contact h1 {
+        color: #25567b;
+        font-size: 30px;
+    }
+    
+    .Layanan h1 {
+        color: #25567b;
+        font-size: 30px;
+    }
+    
+    .Layanan a {
+        display: block;
+        text-decoration: none;
+        color: #fe9215;
+    }
+    
+    .Layanan a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .footerh1 {
+        font-size: 20px;
+        text-align: center;
+        color: #25567b;
+    }
+
+    .TabUser {
+        margin-left: 30%;
+    }
+    
+}
