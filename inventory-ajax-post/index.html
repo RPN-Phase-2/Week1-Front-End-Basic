@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="stylesCard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./IV.js"></script>
+    <script src="./notify.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <div id="cardProfile" class="container-wrapper">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-img">
+              <img class="img-card" src="./assets/card-image.jpg" />
+              <img class="wave" src="./wave.svg" />
+            </div>
+            <div class="card-content">
+              <div class="header">Perfect solution for small business</div>
+              <div class="content">
+                Small businessess need to generate leads to grow. You can use tools like Ringy.
+              </div>
+            </div>
+            <hr />
+            <div style="display: flex; align-items: center; flex-direction: row">
+              <div class="profile" style="flex-grow: 1">
+                <div class="icon">
+                  <img src="./assets/icon.jpg" />
+                </div>
+                <div class="profile-content">
+                  <div id="name" class="zexo">Zexoverz</div>
+                  <div id="role" class="role">Dark Lord, RPN</div>
+                </div>
+              </div>
+              <div id="logout" style="margin: 0 30px; cursor: pointer">Logout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="formData" class="container-wrapper">
+        <div class="form-container">
+          <div class="form-header">
+            <h1 id="title" style="text-transform: capitalize">Login</h1>
+          </div>
+          <div class="button-group">
+            <div class="button-item" id="login">Login</div>
+            <div class="button-item" id="register">Register</div>
+          </div>
+          <div id="login-form" class="" style="width: 100%">
+            <form class="form-content" id="loginForm" method="post" action="">
+              <div class="form-items-wrapper">
+                <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                <div class="form-items">
+                  <label for="cemail">Email</label>
+                  <input
+                    class="form-item IValidate"
+                    data-filter="email"
+                    data-placeholder="email address example abc@Mail.com"
+                    id="cemail"
+                    type="email"
+                    name="email"
+                    required />
+                </div>
+              </div>
+              <div class="form-items-wrapper">
+                <div class="item-icon"><i class="fas fa-key"></i></div>
+
+                <div class="form-items">
+                  <label for="password">Password</label>
+                  <input class="form-item" id="password" type="password" name="password" />
+                </div>
+              </div>
+              <input class="submit" type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="register-form" class="hidden" style="width: 100%">
+            <form class="form-content" id="registerForm" method="post" action="">
+              <div class="form-items-wrapper">
+                <div class="item-icon"><i class="fas fa-user"></i></div>
+                <div class="form-items">
+                  <label for="name">Name</label>
+                  <input
+                    class="form-item IValidate"
+                    data-filter="min"
+                    data-placeholder="minimum value length 2"
+                    data-length="2"
+                    type="text"
+                    name="name"
+                    required />
+                </div>
+              </div>
+              <div class="form-items-wrapper">
+                <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                <div class="form-items">
+                  <label for="cemail">Email</label>
+                  <input
+                    class="form-item IValidate"
+                    data-filter="email"
+                    data-placeholder="email address example abc@Mail.com"
+                    id="cemail"
+                    type="email"
+                    name="email"
+                    required />
+                </div>
+              </div>
+              <div class="form-items-wrapper">
+                <div class="item-icon"><i class="fas fa-key"></i></div>
+
+                <div class="form-items">
+                  <label for="password">Password</label>
+                  <input class="form-item" id="password" type="password" name="password" />
+                </div>
+              </div>
+              <input class="submit IValidator" type="submit" value="Register" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="side-section" class="image-content background-container container-wrapper" />
+    </main>
+  </body>
+  <script></script>
+</html>
