@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #257ca3;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a2d2df;
+}
+
+.full-bg {
+    position: relative;
+    background: url("images/landing-bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.full-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+    z-index: 1;
+}
+
+.full-bg .content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#about ul {
+    list-style: disc inside;
+    margin: 1rem 0;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1 1 30%;
+    text-align: center;
+    margin: 1rem;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#services .service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#services .service-item {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 1rem;
+    background: #dcf3ff;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+#services .service-item:hover {
+    transform: translateY(-10px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    padding: 0.7rem;
+    background: #257ca3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #396d7c;
+}
+
+footer {
+    background: #257ca3;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #services .service-list {
+        flex-direction: column;
+    }
+
+    .team {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
