@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap");
+
+:root {
+  --primary: #42da3d;
+  --primary-content: #041404;
+  --primary-dark: #29bf25;
+  --primary-light: #6ce268;
+
+  --background: #eff0ef;
+  --foreground: #fbfbfb;
+  --border: #dee1de;
+
+  --black: #02020a;
+  --white: #faf9f6;
+
+  /* Typography */
+  --ff: "Be Vietnam Pro", cursive;
+  --ff-logo: "Edu AU VIC WA NT Hand", cursive;
+  --fs-1: 6.5rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.4rem;
+  --fs-4: 2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* Spacing */
+
+  --section-padding: 2.5rem;
+
+  /* Shadow */
+
+  --shadow-1: 0 8px 16px hsla(0, 0%, 0%, 0.15);
+  --shadow-2: 0 8px 8px hsla(0, 0%, 0%, 0.2);
+
+  /* Transition */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+}
+
+/* RESET by Josh W Comeau */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+html {
+  font-family: var(--ff);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+a,
+i,
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utils */
+
+.container {
+  padding-inline: 15px;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.h1,
+.h2,
+.h3 {
+  line-height: 1.1;
+}
+
+.h1 {
+  color: var(--white);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-400);
+  letter-spacing: 1px;
+}
+
+.h2,
+.h3 {
+  color: var(--black);
+}
+
+.h2 {
+  font-size: var(--fs-2);
+}
+
+.h3 {
+  font-size: var(--fs-3);
+}
+
+.btn {
+  background-color: var(--black);
+  color: #ffffff;
+  max-width: max-content;
+  padding: 8px 25px;
+  font-weight: var(--fw-700);
+  border-radius: 50px;
+  transition: var(--transition-1);
+}
+
+.section-title {
+  text-align: center;
+  margin-block-end: 30px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: var(--white);
+  padding: 20px 0;
+  z-index: 4;
+}
+
+.header.active {
+  position: fixed;
+  box-shadow: var(--shadow-1);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo-icon {
+  margin-left: 3rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.logo {
+  font-family: var(--ff-logo);
+  font-size: 3rem;
+}
+
+.nav-toggle-btn {
+  font-size: 30px;
+  transition: var(--transition-1);
+}
+
+.nav-toggle-btn.active .menu-icon,
+.nav-toggle-btn .close-icon {
+  display: none;
+}
+
+.nav-toggle-btn .menu-icon,
+.nav-toggle-btn.active .close-icon {
+  display: block;
+}
+
+.nav-toggle-btn:is(:hover, :focus),
+.header .action-btn:is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+.navbar {
+  position: fixed;
+  top: 85px;
+  left: -320px;
+  bottom: 0;
+  padding: 20px 10px;
+  margin-top: 12px;
+  background-color: var(--white);
+  max-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.navbar.active {
+  transform: translateX(320px);
+  transition-timing-function: var(--transition-1);
+}
+
+.navbar-link {
+  color: var(--primary-content);
+  font-size: var(--fs-6);
+  padding: 10px 15px;
+}
+
+.navbar-link:is(:hover, :focus) {
+  color: var(--primary-dark);
+}
+
+/* Hero */
+.hero {
+  min-height: 360px;
+  background-position: left;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+}
+
+.hero-title .span {
+  font-size: 0.5em;
+  display: block;
+}
+
+.hero-title {
+  color: var(--black);
+  text-shadow: #02020a;
+  font-size: var(--fs-3);
+}
+
+.hero-subtitle {
+  color: var(--primary-content);
+  font-size: var(--fs-5);
+  margin-block: 12px;
+}
+
+.hero .btn {
+  margin-inline: auto;
+}
+
+.hero .btn:is(:hover, :focus) {
+  background-color: var(--primary-dark);
+}
+
+/* Products */
+
+.products {
+  height: 100vh;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.product-item {
+  width: 25%;
+}
+
+.product-item img {
+  border: solid 1px var(--border);
+  padding: 8px;
+}
+
+.product-item .product-title {
+  font-size: var(--fs-8);
+}
+
+.product-item .btn {
+  margin-top: 0.5rem;
+  font-size: 0.5rem;
+}
+
+.product-item .btn:is(:hover, :focus) {
+  background-color: var(--primary-dark);
+}
+
+@media (min-width: 575px) {
+  :root {
+    --fs-2: 4rem;
+    --fs-3: 2.6rem;
+    --fs-8: 1.2rem;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    display: flex;
+    padding-inline-start: 20px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* Products */
+  .product-item .btn {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-1: 9rem;
+    --fs-8: 1.4rem;
+  }
+
+  .hero {
+    aspect-ratio: 1512 / 784;
+    padding-inline-start: 10%;
+  }
+
+  .hero-text {
+    font-size: 2.4rem;
+  }
+
+  /* Products */
+  .product-item {
+    width: 20%;
+    height: 20%;
+  }
+  .product-item .btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --section-padding: 3.125rem;
+    --section-padding: 70px;
+  }
+
+  /* Utils */
+  .container {
+    padding-inline: 30px;
+  }
+
+  /* Header */
+  .nav-toggle-btn,
+  .navbar-action-btn {
+    display: none;
+  }
+
+  .header {
+    background: none;
+  }
+
+  .header.active {
+    background-color: var(--white);
+  }
+
+  .logo {
+    color: var(--primary-light);
+    font-size: 3rem;
+  }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    margin-inline-end: auto;
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar-link {
+    color: var(--black);
+    --fs-6: 1.2rem;
+    font-weight: var(--fw-700);
+    transition: var(--transition-1);
+  }
+
+  .header.active .navbar-link:is(:hover, :focus) {
+    color: var(--primary-light);
+  }
+
+  /* Hero */
+  .hero {
+    /* margin-block-start: 0 */
+    height: 100vh;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 7rem;
+  }
+}
