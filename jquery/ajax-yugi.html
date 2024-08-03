@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Ajax Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .card-info {
+            margin-top: 20px;
+        }
+        .card-info img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax tutorial</h1>
+    <button id="fetch-button">Fetch Card Info</button>
+    <div class="card-info" id="card-info">
+        <!-- Card information will be displayed here -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetch-button').click(function() {
+                $.ajax({
+                    url: "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician",
+                    type: "GET",
+                    success: function(response) {
+                        var card = response.data[0];
+                        var cardInfoDiv = $('#card-info');
+                        cardInfoDiv.html(`
+                            <h2>${card.name}</h2>
+                            <img src="${card.card_images[0].image_url}" alt="${card.name}">
+                            <p><strong>Type:</strong> ${card.type}</p>
+                            <p><strong>Race:</strong> ${card.race}</p>
+                            <p><strong>Attribute:</strong> ${card.attribute}</p>
+                            <p><strong>Level:</strong> ${card.level}</p>
+                            <p><strong>ATK:</strong> ${card.atk}</p>
+                            <p><strong>DEF:</strong> ${card.def}</p>
+                            <p><strong>Description:</strong> ${card.desc}</p>
+                        `);
+                    },
+                    error: function() {
+                        alert("Error fetching card information.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
