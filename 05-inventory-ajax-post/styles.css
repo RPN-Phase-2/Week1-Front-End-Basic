@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zain:wght@200;300;400;700;800;900&display=swap");
+
+:root {
+  --primary-color: #399918;
+  --secondary-color: #ecffe6;
+  --tertiary-color: #ffaaaa;
+  --quaternary-color: #ff7777;
+  --bg-color: #faf9f6;
+
+  --ff-primary: "Ubuntu", sans-serif;
+  --ff-secondary: "Zain", sans-serif;
+}
+
+/* Andybell CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make link style same as text */
+a {
+  text-decoration: none;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Input reset */
+input {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utils */
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--bg-color);
+}
+
+.title {
+  font-family: var(--ff-secondary);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.title span {
+  color: var(--quaternary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  margin-top: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+label {
+  font-size: 0.75rem;
+}
+
+input {
+  margin: 4px 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+button:hover {
+  background-color: var(--quaternary-color);
+  color: var(--secondary-color);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 0.25em;
+}
+
+.divider span {
+  padding: 0 10px;
+  color: #757575;
+  font-size: 14px;
+}
+
+.error-message {
+  margin-top: 8px;
+  color: var(--quaternary-color);
+  font-size: 0.75rem;
+  border: 1px solid var(--quaternary-color);
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* auth section */
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.icon-container .title {
+  font-size: 2.5rem;
+}
+
+.icon {
+  width: 40px;
+}
+
+.auth form {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth .title {
+  font-size: 2.5rem;
+}
+
+.auth label {
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.auth input {
+  border: 1px solid #313638;
+  padding: 4px 12px;
+  margin-right: 12px;
+}
+
+.auth input:focus {
+  border: #399918 1px solid;
+}
+
+.auth button {
+  margin-right: 12px;
+}
+
+.social-auth {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-auth .card {
+  width: 25%;
+  text-align: center;
+  border: #313638 1px solid;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+/* hide image in small & medium screens */
+.sider img {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .sider {
+    width: 100%;
+  }
+  .sider img {
+    width: 100%;
+    display: block;
+  }
+
+  .section-auth {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .icon-container {
+    justify-content: center;
+  }
+
+  .auth {
+    width: 35%;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .social-auth .card {
+    width: 100%;
+  }
+}
