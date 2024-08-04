@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b5d0819826.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register | Inventory System</title>
+  </head>
+  <body>
+    <section class="section-auth">
+      <article class="auth">
+        <div class="icon-container">
+          <img class="icon" src="./favicon.svg" alt="logo" class="logo" />
+          <p class="title">Inventory<span>System</span></p>
+        </div>
+        <h2 class="title">Register Account</h2>
+        <p>Already have an account? <a href="./login-form.html">Login</a></p>
+
+        <form class="register" data-form></form>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" data-username />
+          <label for="username">Email</label>
+          <input type="text" name="email" id="email" data-email />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" data-password />
+          <button type="submit" class="btn-register" data-register-btn>
+            Register
+          </button>
+        </form>
+
+        <div class="divider">
+          <span>Or with Social Account</span>
+        </div>
+
+        <div class="social-auth">
+          <div class="card">
+            <a href="#" class="social-auth-link">
+              <i class="fa-brands fa-facebook"></i>
+              Facebook
+            </a>
+          </div>
+          <div class="card">
+            <a href="#" class="social-auth-link">
+              <i class="fa-brands fa-google"></i>
+              Google
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="sider">
+        <img src="images/inventory-bg.jpg" alt="inventory-bg" class="bg" />
+      </article>
+    </section>
+    <script>
+      $(document).ready(function () {
+  $("[data-register-btn]").click(function (e) {
+    e.preventDefault();
+
+    var username = $("[data-username]").val();
+    var email = $("[data-email]").val();
+    var password = $("[data-password]").val();
+
+    if (username === "" || email === "" || password === "") {
+      $("<p class='error-message' data-error-message></p>")
+        .text("Please fill all the fields")
+        .insertBefore("[data-form]");
+
+      return;
+    } else if (username.length < 5 || username.length > 20) {
+      $("<p class='error-message' data-error-message></p>")
+        .text("Username must be between 5 and 20 characters")
+        .insertBefore("[data-form]");
+      return;
+    } else if (password.length < 8 || password.length > 20) {
+      $("<p class='error-message' data-error-message></p>")
+        .text("Password must be between 8 and 20 characters")
+        .insertBefore("[data-form]");
+      return;
+    }
+
+    $.ajax({
+      url: "https://inventory-system-api-omega.vercel.app/v1/auth/register",
+      method: "POST",
+      data: {
+        name: username,
+        email: email,
+        password: password,
+        role: "user",
+      },
+      success: function (data) {
+        console.log("success")
+        localStorage.setItem("token", JSON.stringify(data.data.tokens));
+        localStorage.setItem("user", JSON.stringify(data.data.userCreated));
+
+        Swal.fire({
+          title: "Registration Successful",
+          text: "lorem ipsum dolor sit amet",
+          icon: "success",
+        });
+
+        setTimeout(function () {
+          window.location.href = "./index.html";
+        }, 1500);
+      },
+      error: function (error) {
+        var error = error.responseJSON
+        Swal.fire({
+          title: "Registration Error",
+          text: `${error.code}: ${error.message}`,
+          icon: "error",
+        });
+      },
+    });
+  });
+});
+    </script>
+  </body>
+</html>
