@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><img src="/pet-shop/assets/pedro.jpg" alt="Pedro" class="pedro">
+            <h2 class="title-shop"><span class="span-header">Dodo</span> Shop</h2>
+        </div>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="text-parent">
+            <h1 class="main-text">Anything for your Pets!</h1>
+            <p class="slogan">What do you need for your pet? Toys? Food? Grooming? We've got it all ! <br> At Dodo Pet
+                Shop, we are your one-stop shop for all your pet needs. From nutritious food and fun toys to
+                professional grooming and expert care, we have everything to keep your furry friends happy and healthy.
+                Discover the best for your pets at our store</p>
+            <a href="#products" class="btn-round">Shop now</a>
+        </div>
+
+        <div class="img-parent">
+            <img src="assets/logo-petshop-removebg-preview__1_-removebg-preview.png" class="img-content" alt="">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="product-header">Our Products</h2>
+        <div class="product-container">
+
+            <div class="product-wrapper">
+                <div class="product">
+                    <h3 class="product-type">Pet Food</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-food-removebg-preview.png" alt="Pet food">
+                    </div>
+                    <p class="product-description">Nourish your furry friend with our premium selection of pet food. Give your pet the best with our carefully curated food options that promote well-being and happiness</p>
+                    <img src="assets/wave.svg" class="wave">
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product-wrapper">
+                <div class="product">
+                    <h3 class="product-type">Toys</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-toy-removebg-preview.png" alt="">
+                    </div>
+                    <p class="product-description">Whether your furry friend loves to chase, fetch, or chew, we have the perfect toy to keep them entertained and active. Grab it now for playing with your furry friend</p>
+                    <img src="assets/wave.svg" alt="">
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="product-wrapper">
+                <div class="product">
+                    <h3 class="product-type">Accesories</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-tools-removebg-preview.png" alt="">
+                    </div>
+                    <p class="product-description">From cozy beds and fashionable collars to practical harnesses and stylish apparel, our accessories blend functionality with flair. Its make your pet cute twice!</p>
+                    <img src="assets/wave.svg" alt="">
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Wave -->
+    <div class="wave-container">
+        <img src="assets/wave-section.svg" class="wave-section">
+    </div>
+
+    <!-- Services Section -->
+     <section id="services" class="services">
+        <h2 class="service-header">Our Services</h2>
+        <div class="service-container">
+
+            <div class="service-wrapper">
+                <div class="service">
+                    <h3 class="service-type">Pet Grooming</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-grooming-removebg-preview.png" alt="">
+                    </div>
+                    <p class="service-description">test test test</p>
+                    <img src="assets/wave.svg" alt="">
+                </div>
+                <button class="book-btn">Book now</button>
+            </div>
+
+            <div class="service-wrapper">
+                <div class="service">
+                    <h3 class="service-type">Pet Hotel</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-hotel-removebg-preview.png" alt="">
+                    </div>
+                    <p class="service-description">test test test</p>
+                    <img src="assets/wave.svg" alt="">
+                </div>
+                <button class="book-btn">Book now</button>
+            </div>
+            
+            <div class="service-wrapper">
+                <div class="service">
+                    <h3 class="service-type">Pet Clinic</h3>
+                    <div class="card-img">
+                        <img src="assets/pet-clinic-removebg-preview.png" alt="">
+                    </div>
+                    <p class="service-description">test test test</p>
+                    <img src="assets/wave.svg" alt="">
+                </div>
+                <button class="book-btn">Book now</button>
+            </div>
+        </div>
+     </section>
+
+     <!-- Contact  -->
+     <section id="contact" class="contact">
+        <h2 class="contact-header">Contact Us</h2>
+        <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="owner-name">Owner's Name:</label>
+                <input type="text" id="owner-name" name="owner-name" required>
+            </div>
+            <div class="form-group">
+                <label for="pet-name">Pet's Name:</label>
+                <input type="text" id="pet-name" name="pet-name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 Dodo Pet Shop. Inc All rights reserved.</p>
+</footer>
+
+<div id="notification" class="notification">
+    <span class="close-btn">&times;</span>
+    <p>Buy Success</p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
