@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Inventory System</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      button {
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button>
+        <a href="./login-form.html">Login</a>
+      </button>
+      <button>
+        <a href="./register-form.html">Register</a>
+      </button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        if (localStorage.getItem("token") && localStorage.getItem("user")) {
+          var user = JSON.parse(localStorage.getItem("user"));
+          console.log(user);
+          $(".container").html(`<p>Welcome ${user.name}</p>`);
+        }
+      });
+    </script>
+  </body>
+</html>
