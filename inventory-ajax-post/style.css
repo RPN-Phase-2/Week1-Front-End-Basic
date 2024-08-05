@@ -73,7 +73,7 @@ body {
     border: 3px solid black;
     border-left: none;
     border-right: none;
-   
+    background-color: #ff8400;
     margin: 0;
     width: 100%;
     height: 4rem;
@@ -99,7 +99,7 @@ body {
 }
 
 .tab button:hover {
-    background-color: #ff8400;
+    background-color: #e4ff19;
 }
 
 .tab button.active {
