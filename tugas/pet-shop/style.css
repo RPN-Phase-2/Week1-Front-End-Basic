@@ -1,0 +1,466 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+   font-family: 'Montserrat', lobster;
+   width: 100%;
+   height: 100%;
+   overflow-x:hidden ;
+}
+
+#header{
+   background-color: #618264;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   position: sticky;
+   top: 0;
+   width: 100%;
+   height: 75px;
+   z-index: 1000;
+   transition: background-color 0.3s ease;
+}
+
+.logo{
+   display: flex;
+   justify-content: center;
+}
+
+.title-shop{
+   align-self:center;
+   padding-left: 2rem;
+   font-size: 1.5em;
+}
+
+.logo .pedro{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+   from {
+       transform: rotate(0deg);
+   }
+   to {
+       transform: rotate(360deg);
+   }
+}
+
+.logo .pedro:hover {
+   animation-play-state: paused; 
+}
+
+nav ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+nav ul li{
+   margin-left: 20px;
+}
+
+nav ul li a{
+   text-decoration: none;
+   color: white;
+   margin-right: 2rem;
+}
+
+a:hover{
+   text-decoration: underline;
+}
+
+.hero{
+   text-align: center;
+   padding: 4rem;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   background-color: #618264;
+   color: #f1f1f1;
+}
+
+.text-parent,
+.img-parent{
+   width: 50%;
+   margin-bottom: 10rem;
+}
+
+.hero .text-parent{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.main-text{
+   font-size: 3rem;
+   font-weight: 700;
+   margin: 0 auto;
+}
+
+.slogan{
+   margin-top: 1.5rem;
+   font-size: 1.1rem;
+   font-weight:600;
+   font-optical-sizing: auto;
+   text-align: center;
+   padding-left: 2rem;
+   line-height: 1.5;
+   max-width: 720px;
+   margin: 15px auto;
+}
+
+.hero .img-parent{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+   padding-left: auto;
+}
+
+.hero .img-parent .img-content{
+   width: 90%;
+   height: 90%;
+   object-fit: contain;
+}
+
+.btn-round {
+   display: inline-block;
+   background: linear-gradient(45deg, #618264, #B0D9B1);
+   color: white;
+   padding: 15px 30px;
+   text-decoration: none;
+   font-size: 18px;
+   border-radius: 50px; 
+   border: none;
+   transition: background 0.3s ease;
+   text-align: center;
+   width: auto;
+   margin: 30px auto;
+}
+
+.btn-round:hover {
+   background: linear-gradient(45deg, #B0D9B1, #618264); 
+   transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.wave-section{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+/* Products and Services */
+
+#products, .services{
+   height: 100vh;
+   padding: 4rem;
+   background-color: #D0E7D2
+}
+
+.product-header, .service-header{
+   display: flex;
+   margin: 0 auto;
+   font-size: 3rem;
+   width: fit-content;
+}
+
+.product-container, .service-container{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 30px;
+   width: auto;
+   height: 70vh;
+}
+
+.product, .service{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   border: 1px solid #fff;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 100%;
+   max-width: 500px;
+   height: 600px;
+   margin: 10px;
+   padding: 0 20px;
+   box-sizing: border-box;
+}
+
+.product-wrapper {
+   position: relative; /* To position the dotlottie-player absolutely */
+}
+
+.background-animation {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1; /* Ensures it stays behind the text and images */
+   pointer-events: none; /* Prevents it from interfering with button clicks or other interactions */
+}
+
+.product, .service {
+   position: relative;
+   z-index: 1; /* Ensures content stays above the background animation */
+   background: rgba(255, 255, 255, 0.85); /* Semi-transparent background for readability */
+   padding: 20px;
+   border-radius: 8px;
+}
+
+.card-img img {
+   z-index: 2; /* Ensures images stay above the animation */
+}
+
+.product-wrapper, .service-wrapper {
+   width: 100%;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 10px; /* Space around each card and button */
+}
+
+.product-type, .service-type{
+   display: flex;
+   margin: auto;
+   width: fit-content;
+}
+
+.product-description, .service-description{
+   font-size: 16px; /* Adjust size as needed */
+   line-height: 1.5; /* Space between lines for readability */
+   color: #333; /* Dark gray color for text */
+   margin: 10px 0; /* Space around the text */
+   text-align: center; /* Center-align the text */
+   padding: 0 15px; /* Add some padding inside the card */
+}
+
+.card-img{
+   width: 50%;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.card-img img{
+   max-width: 100%;
+   height: auto;
+}
+
+.wave{
+   display: block;
+   width: 100%;
+   z-index: 100;
+   bottom: -20px;
+   margin-top: auto;
+}
+
+.buy-btn, .book-btn {
+   background: linear-gradient(45deg, #618264, #B0D9B1);
+   color: #fff; 
+   border: none; 
+   border-radius: 30px; /* Adjust this value to get the desired roundness */
+   padding: 10px 20px; 
+   font-size: 16px; 
+   cursor: pointer; 
+   transition: background-color 0.3s ease; 
+}
+
+.buy-btn:hover, .book-btn:hover{
+   background: linear-gradient(45deg, #B0D9B1 , #618264 );
+   transform: scale(1.05)
+}
+
+/* Contact Section */
+.contact {
+   padding: 50px 20px;
+   background-color: #618264;
+   text-align: center;
+}
+
+.contact-header {
+   color: #fff;
+   display: flex;
+   margin: 0 auto;
+   font-size: 3rem;
+   width: fit-content;
+   margin-bottom: 35px;
+}
+
+.contact-form {
+   max-width: 600px;
+   margin: 0 auto;
+   background: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+   margin-bottom: 20px;
+   text-align: left;
+}
+
+.form-group label {
+   display: block;
+   font-size: 16px;
+   margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+.submit-btn {
+   background: linear-gradient(45deg, #618264, #B0D9B1);
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+   background: linear-gradient(45deg, #B0D9B1 ,#618264);
+   transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .contact-form {
+       padding: 10px;
+   }
+
+   .title-shop {
+       font-size: 1.2em;
+   }
+
+   .hero {
+       padding: 2rem;
+       height: 70vh;
+   }
+
+   .product-container, .service-container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .product, .service {
+       max-width: 90%;
+       height: auto;
+   }
+}
+
+@media (max-width: 600px) {
+   .title-shop {
+       font-size: 1em;
+       padding-left: 1rem;
+   }
+
+   .hero {
+       padding: 1rem;
+       height: 60vh;
+       flex-direction: column;
+   }
+
+   .text-parent,
+   .img-parent {
+       width: 100%;
+       margin-bottom: 2rem;
+   }
+
+   .img-parent {
+       margin-top: 5rem;
+   }
+
+   .product-header, .service-header {
+       font-size: 2rem;
+   }
+
+   .product, .service {
+       max-width: 100%;
+       padding: 10px;
+   }
+
+   .contact-header {
+       font-size: 2rem;
+   }
+
+   .form-group label,
+   .form-group input,
+   .form-group textarea {
+       font-size: 14px;
+   }
+
+   .btn-round,
+   .buy-btn,
+   .book-btn,
+   .submit-btn {
+       font-size: 14px;
+       padding: 10px 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .hero {
+       flex-direction: column-reverse;
+       align-items: center;
+       text-align: center;
+   }
+
+   .hero .text-parent,
+   .hero .img-parent {
+       width: 100%;
+   }
+
+   .hero .img-parent {
+       margin-top: 1rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .product-container,
+   .service-container {
+       flex-direction: column;
+       align-items: center;
+   }
+}
+
+@media (max-width: 600px) {
+    .slogan {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .product-description, .service-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
