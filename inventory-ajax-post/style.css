@@ -1,0 +1,141 @@
+/* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-register,
+.container-login {
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  column-gap: 5rem;
+}
+
+.form-section h1 {
+  font-size: 2rem;
+}
+
+.form-section form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding-bottom: 2px;
+}
+
+.form-input {
+  padding: .5rem 1rem;
+  background-color: #f8f8f8;
+  position: relative;
+  width: 100%;
+}
+
+
+label.error,
+#email-taken {
+  color: red;
+  position: absolute;
+  bottom: -25px;
+  left: 10px;
+  font-size: .8rem;
+  display: block; 
+}
+
+.form-input::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: #808080;
+  transition: width 0.3s;
+}
+
+.form-input:focus-within::after {
+  width: 100%;
+}
+
+.form-input input {
+  border: none;
+  outline: none;
+  width: 20vw;
+  margin-left: 1rem;  
+  background-color: transparent;
+}
+
+.form-input .eye {
+  width: 20px;
+  cursor: pointer;
+}
+
+.form-input input:focus::placeholder {
+  color: #222;
+}
+
+.form-section button {
+  background-color: #6dabe4;
+  color: #fff;
+  border: 0;
+  border-radius: .5rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background-color: #2b8eeb;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.content-section img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.content-section a {
+  color: #222;
+}
+
+@media screen and (max-width: 785px) {
+  * {
+    font-size: 95%;
+  }
+
+  .content-section img {
+    display: none;
+  }
+  .container-register {
+    flex-direction: column;
+    padding: 3rem;
+  }
+  .container-login {
+    flex-direction: column-reverse;
+  }
+  .form-section button {
+    padding: .8rem 0;
+  }
+}
