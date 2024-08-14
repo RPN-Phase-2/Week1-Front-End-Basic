@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Ajax Post | Register</title>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Form Validate -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-register">
+      <section class="form-section">
+        <h1>Sign Up</h1>
+        <form id="form-register">
+          <div class="form-input">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="name" id="name" placeholder="Your Name" />
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Your Email" />
+            <div id="email-taken"></div>
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+            <i class="fa-regular fa-eye-slash eye"></i>
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              id="repeat_password"
+              name="repeat_password"
+              placeholder="Repeat your password"
+            />
+            <i class="fa-regular fa-eye-slash eye"></i>
+          </div>
+          <button type="submit" id="register-btn">Register</button>
+          
+        </form>
+      </section>
+      <section class="content-section">
+        <img src="./img/register.jpeg" alt="register" />
+        <a href="login.html">I am already member</a>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

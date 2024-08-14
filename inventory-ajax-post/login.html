@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Ajax Post | Login</title>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Form Validate -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-login">
+      <section class="content-section">
+        <img src="./img/login.jpeg" alt="login" />
+        <a href="register.html">Create an account</a>
+      </section>
+      <section class="form-section">
+        <h1>Sign In</h1>
+        <form id="form-login">
+          <div class="form-input">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Your Email" />
+          </div>
+          <div class="form-input">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password" />
+            <i class="fa-regular fa-eye-slash eye"></i>
+          </div>
+          <button type="submit" id="login-btn">Log in</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
