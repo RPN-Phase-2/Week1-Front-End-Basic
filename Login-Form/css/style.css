@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+.formSection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.formSection h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.formSection .Form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.Username input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}
+.email input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+
+.Password input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.btn {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #80589e;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+h3 {
+    color: #404040;
+    font-size: medium;
+    padding: 10px 0 ;
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.icon {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #404040;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    font-size: small;
+    font-weight: 600;
+}
+
+.icon i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.linktosignin {
+    font-size: small;
+    text-align: center;
+    padding: 20px 0;
+    color: #404040;
+}
+
+label.error {
+    color: red;
+    font-size: small;
+}
+
+@media screen and (max-width: 576px) {
+    .formSection {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        /* margin: 0 20px; */
+    }
+}

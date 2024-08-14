@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contoh Efek Fading dengan jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    #gambar {
+        width: 300px;
+        height: 200px;
+        background-color: lightblue;
+    }
+</style>
+</head>
+<body>
+
+<div id="gambar"></div>
+<button id="sembunyikan">Sembunyikan Gambar</button>
+<button id="tampilkan">Tampilkan Gambar</button>
+
+<script>
+    $(document).ready(function() {
+        // sembunyikan gambar ketika web di buka
+        $('#gambar').hide()
+
+        // ketika tombol sembunyikan di click maka akan menyembunyikan gambar dengan animasi fadeOut dengan durasi 1dtk
+        $('#sembunyikan').click(function() {
+            $('#gambar').fadeOut(1000)
+        })
+
+        // Ketika tombol tampilkan di click maka akan menampilkan gambar dengan animasi fadeIn dengan durasi 1dtk
+        $('#tampilkan').click(function() {
+            $('#gambar').fadeIn(1000)
+        })
+    })
+
+
+</script>
+
+</body>
+</html>

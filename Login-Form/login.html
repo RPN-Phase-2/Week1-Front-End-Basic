@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <section class="formSection">
+        <h2>Login</h2>
+        <form id="loginForm" class="Form">
+            <div class="email">
+                <input type="email" id="emailSignin" name="emailSignin" placeholder="Enter Email">
+            </div>
+            <div class="Password">
+                <input type="password" id="passwordSignin" name="passwordSignin" placeholder="Password">
+            </div>
+            <h3>Having trouble to sign in?</h3>
+            <button class="btn" id="btnLogin" name="btnLogin">Submit</button>
+            <div class="linksignin">
+                <p>- or Sign in with -</p>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-google"></i> Google</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+            <h1 class="linktosignin">Dont have a account? <a href="index.html">Sign up</a></>
+        </form>
+    </section>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
