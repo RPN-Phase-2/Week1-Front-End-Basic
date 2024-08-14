@@ -118,7 +118,9 @@ $(document).ready(function () {
           email: email,
           password: password,
         },
-        success: function (data) {
+        success: function (response) {
+          console.log(response);
+          localStorage.setItem("loggedInUser", response.userLogin.name);
           window.location.href = "index.html";
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -127,4 +129,13 @@ $(document).ready(function () {
       });
     },
   });
+
+  // index.html
+  const name = localStorage.getItem('loggedInUser');
+  $("#welcome").text(`Selamat Datang ${name}`);
+
+  $("#logout").click(function() {
+    localStorage.removeItem('loggedInUser');
+    window.location.href = "login.html";
+  })
 });
