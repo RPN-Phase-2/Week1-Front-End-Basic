@@ -1,0 +1,140 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Settings */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/pet-shop-background.webp') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-in;
+}
+
+/* Product Section */
+#products {
+    background-color: #f4f4f4;
+    padding: 2rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    margin: 15px;
+    text-align: center;
+    flex: 0 1 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* About Section */
+#about {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f39c12;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

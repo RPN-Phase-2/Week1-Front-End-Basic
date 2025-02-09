@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .card-info {
+            margin-top: 20px;
+        }
+        .card-info img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax tutorial</h1>
+    <button id="fetch-button">Fetch Card Info</button>
+    <div class="card-info" id="card-info">
+        <!-- Card information will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById('fetch-button').addEventListener('click', function() {
+            // Membuat objek XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+            // Menginisiasi permintaan GET ke server
+            xhttp.open("GET", "https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician", true);
+
+            // Mengirim permintaan
+            xhttp.send();
+
+            // Menentukan fungsi yang akan dipanggil saat respons diterima
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    var card = response.data[0];
+
+                    var cardInfoDiv = document.getElementById('card-info');
+                    cardInfoDiv.innerHTML = `
+                        <h2>${card.name}</h2>
+                        <img src="${card.card_images[0].image_url}" alt="${card.name}">
+                        <p><strong>Type:</strong> ${card.type}</p>
+                        <p><strong>Race:</strong> ${card.race}</p>
+                        <p><strong>Attribute:</strong> ${card.attribute}</p>
+                        <p><strong>Level:</strong> ${card.level}</p>
+                        <p><strong>ATK:</strong> ${card.atk}</p>
+                        <p><strong>DEF:</strong> ${card.def}</p>
+                        <p><strong>Description:</strong> ${card.desc}</p>
+                    `;
+                }
+            };
+
+        });
+    </script>
+</body>
+</html>
