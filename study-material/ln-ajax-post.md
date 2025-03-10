@@ -15,7 +15,8 @@ gunakan hanya 2 api saja
 
 dan wajib memakai prod API. 
 
-jika cloud service kalian sudah expired, kalian bisa mendeploy ulang backendnya di vercel
+jika cloud service kalian sudah expired, kalian bisa mendeploy ulang backendnya di vercel.
+
 resource: https://kanakkholwal.medium.com/how-to-deploy-your-node-js-backend-on-vercel-a-step-by-step-guide-21796db74601
 
 Screenshot hasil submit FORM (data user masuk ke backend). bisa ss database atau response get user
