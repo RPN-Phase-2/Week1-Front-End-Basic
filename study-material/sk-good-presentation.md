@@ -56,7 +56,9 @@ Flow archi ini juga bagus untuk dijelaskan dalam presentasi, karena biasanya aud
 
 disini gua bakal share tools bagus buat bikin flow archi dan sering gua pakai.
 https://excalidraw.com/
-![image](https://github.com/user-attachments/assets/33a2159e-3434-467a-bb7e-7733e4a9f0c4)
+
+![image](https://github.com/user-attachments/assets/48a6af7a-1cbc-4fd2-99c2-22279e7d7e20)
+
 
 ## Application Stacks 
 komponen terakhir yang perlu dijelaskan dalam presentasi project adalah application stacks.
