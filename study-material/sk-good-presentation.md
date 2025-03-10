@@ -43,9 +43,9 @@ Di phase 2 ini kalian harus mulai belajar menentukan MVP di setiap aplikasi yang
 
 contoh sederhana :
 
-Todo list app -> MVP nya adalah fitur To Do
-E commerce -> MVP nya bisa Product Listing dan Merchant Feature
-Blog App -> Sudah pasti MVP nya Blog Creation
+- Todo list app -> MVP nya adalah fitur To Do
+- E commerce -> MVP nya bisa Product Listing dan Merchant Feature
+- Blog App -> Sudah pasti MVP nya Blog Creation
 
 
 ## Product Feature 
